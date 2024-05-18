@@ -3,8 +3,8 @@ import React from 'react';
 const SearchWrapper: React.FC = () => {
   return (
     <div className="p-4 flex items-center justify-between flex-wrap">
-      <h1 className="text-2xl font-bold">Students</h1>
-      <div className="flex items-center space-x-4">
+      <h4 className="text-2xl font-bold">Students</h4>
+      <div className="flex items-center space-x-4 flex-wrap">
         <input
           type="text"
           placeholder="Search"
