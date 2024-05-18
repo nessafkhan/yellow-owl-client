@@ -8,12 +8,12 @@ const SearchWrapper: React.FC = () => {
         <input
           type="text"
           placeholder="Search"
-          className="w-[296.93px] h-[41px] px-[17px] py-[8px] border-t border-l border-r border-b-0 rounded-tl-md rounded-md opacity-100"
+          className="w-[296.93px] h-[41px] px-[17px] py-[8px] border rounded-md opacity-100"
         />
         <button
-          className="w-[172.91px] h-[48px] bg-green-500 text-white rounded-tr-md rounded-md opacity-100"
+          className="w-[172.91px] h-[41px] bg-green-500 text-white rounded-tr-md rounded-md opacity-100"
         >
-          Search
+          ADD NEW STUDENT
         </button>
       </div>
     </div>
