@@ -1,8 +1,8 @@
 export interface StudentData {
-  id: number;
+  _id: number;
   name: string;
   email: string;
   phone: string;
-  enrollNumber: string;
-  dateOfAdmission: string;
+  enroll_number: string;
+  admission_date: string;
 }
