@@ -1,8 +1,10 @@
 import React from 'react';
+import { SearchWrapperProps } from './SearchWrapper.type';
 
-const SearchWrapper: React.FC = () => {
+const SearchWrapper: React.FC<SearchWrapperProps> = ({ handleAddNewStudent }) => {
+
   return (
-    <div className="p-4 flex items-center justify-between flex-wrap">
+    <div className="p-2 flex items-center justify-between flex-wrap">
       <h4 className="text-2xl font-bold">Students</h4>
       <div className="flex items-center space-x-4 flex-wrap">
         <input
@@ -12,6 +14,7 @@ const SearchWrapper: React.FC = () => {
         />
         <button
           className="w-[172.91px] h-[41px] bg-green-500 text-white rounded-tr-md rounded-md opacity-100"
+          onClick={handleAddNewStudent}
         >
           ADD NEW STUDENT
         </button>

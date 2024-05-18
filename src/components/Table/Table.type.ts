@@ -1,4 +1,4 @@
-import { StudentData } from "../../interfaces/studentaData";
+import { StudentData } from "../../interfaces/studentData";
 
 export interface TableProps {
   data: StudentData[];
@@ -6,4 +6,5 @@ export interface TableProps {
   onNextPage: () => void;
   isPrevDisabled: boolean;
   isNextDisabled: boolean;
+  onEdit?: () => void;
 }

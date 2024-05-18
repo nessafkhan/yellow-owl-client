@@ -2,14 +2,14 @@ import React from 'react';
 import { FaEdit, FaTrash, FaUserCircle } from 'react-icons/fa';
 import { TableProps } from './Table.type';
 
-const Table: React.FC<TableProps> = ({ data, onPrevPage, onNextPage, isPrevDisabled, isNextDisabled }) => {
+const Table: React.FC<TableProps> = ({ data, onPrevPage, onNextPage, isPrevDisabled, isNextDisabled, onEdit }) => {
   const isMobileView = window.innerWidth < 768;
 
   return (
     <div>
-      <table className={`w-full bg-white rounded-md divide-y divide-gray-200`}>
+      <table className={`w-full mt-4 bg-white rounded-md divide-y divide-gray-200`}>
         <thead>
-          <tr className="text-gray-600">
+          <tr className="text-gray-600 font-medium">
             <th className="py-3">Name</th>
             <th className="py-3">Email</th>
             {!isMobileView && (
@@ -19,7 +19,7 @@ const Table: React.FC<TableProps> = ({ data, onPrevPage, onNextPage, isPrevDisab
                 <th className="py-3">Date of Admission</th>
               </>
             )}
-            <th className="py-3">Actions</th>
+            <th className="py-3"></th>
           </tr>
         </thead>
         <tbody>
@@ -38,7 +38,7 @@ const Table: React.FC<TableProps> = ({ data, onPrevPage, onNextPage, isPrevDisab
                 </>
               )}
               <td className="flex space-x-2 py-3">
-                <FaEdit className="text-blue-500 cursor-pointer" />
+                <FaEdit className="text-blue-500 cursor-pointer" onClick={onEdit} />
                 <FaTrash className="text-red-500 cursor-pointer" />
               </td>
             </tr>

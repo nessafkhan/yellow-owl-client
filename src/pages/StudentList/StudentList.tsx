@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Table from '../../Components/Table/Table';
-import { StudentData } from '../../interfaces/studentaData';
+import Table from '../../components/Table/Table';
+import { StudentData } from '../../interfaces/studentData';
+import { StudentListPropType } from './StudentList.type';
 
-const StudentList: React.FC = () => {
+const StudentList: React.FC<StudentListPropType> = ({ onEdit }) => {
   const [data, setData] = useState<StudentData[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -47,6 +48,7 @@ const StudentList: React.FC = () => {
       onNextPage={handleNextPage}
       isPrevDisabled={isPrevDisabled}
       isNextDisabled={isNextDisabled}
+      onEdit={onEdit}
     />)
   );
 };
